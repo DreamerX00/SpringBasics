@@ -40,4 +40,17 @@ public class MusicLibraryController {
         return "Edited Successfully";
     }
 
+    @DeleteMapping("/deleteAll")
+    public String deleteAll(){
+        myMusicLibrary.clear();
+        return "All Data Deleted Successfully";
+    }
+
+    @DeleteMapping("/deleteById/{id}")
+    public String deleteById(@PathVariable int id){
+        id-=1;
+        myMusicLibrary.remove(id);
+        return "Id : "+id+" Deleted Successfully";
+    }
+
 }
