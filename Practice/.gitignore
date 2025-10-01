@@ -1,28 +1,40 @@
-HELP.md
-.gradle
+# ========================================
+# General Build Artifacts
+# ========================================
+.gradle/
 build/
 !gradle/wrapper/gradle-wrapper.jar
+
+# Ignore build outputs except inside source folders
 !**/src/main/**/build/
 !**/src/test/**/build/
+
+# ========================================
+# Application Configuration Files
+# ========================================
 application.properties
 application.yml
 application-*.properties
 application-*.yml
 
-### STS ###
-.apt_generated
+# ========================================
+# Eclipse / Spring Tool Suite (STS)
+# ========================================
+.apt_generated/
 .classpath
 .factorypath
 .project
-.settings
+.settings/
 .springBeans
-.sts4-cache
+.sts4-cache/
 bin/
 !**/src/main/**/bin/
 !**/src/test/**/bin/
 
-### IntelliJ IDEA ###
-.idea
+# ========================================
+# IntelliJ IDEA
+# ========================================
+.idea/
 *.iws
 *.iml
 *.ipr
@@ -30,12 +42,23 @@ out/
 !**/src/main/**/out/
 !**/src/test/**/out/
 
-### NetBeans ###
-/nbproject/private/
-/nbbuild/
-/dist/
-/nbdist/
-/.nb-gradle/
+# ========================================
+# NetBeans
+# ========================================
+nbproject/private/
+nbbuild/
+dist/
+nbdist/
+.nb-gradle/
 
-### VS Code ###
+# ========================================
+# Visual Studio Code
+# ========================================
 .vscode/
+
+# ========================================
+# OS & Miscellaneous
+# ========================================
+*.log
+.DS_Store
+Thumbs.db
