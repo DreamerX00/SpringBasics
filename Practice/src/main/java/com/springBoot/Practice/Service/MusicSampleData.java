@@ -1,7 +1,7 @@
 package com.springBoot.Practice.Service;
 
 import com.springBoot.Practice.Controller.MusicLibraryController;
-import com.springBoot.Practice.Entity.Genre;
+import com.springBoot.Practice.Enum.Genre;
 import com.springBoot.Practice.Entity.MusicLibrary;
 import jakarta.annotation.PostConstruct;
 import org.springframework.stereotype.Component;

@@ -1,4 +1,4 @@
-package com.springBoot.Practice.Entity;
+package com.springBoot.Practice.Enum;
 
 public enum Genre {
     ROCK,
