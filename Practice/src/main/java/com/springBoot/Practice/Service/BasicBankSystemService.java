@@ -45,7 +45,7 @@ public class BasicBankSystemService {
                 .orElse(null);
     }
 
-    public void getAccountType(String accountNumber) {
+    public void getAccountType(String accountNumber) {      
         BasicBankSystem account = getAccountByAccountNumber(accountNumber);
         if (account != null) {
             System.out.println("Account Type: " + account.getAccountType());

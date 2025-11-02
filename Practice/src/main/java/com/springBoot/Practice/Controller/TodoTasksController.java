@@ -1,11 +1,8 @@
 package com.springBoot.Practice.Controller;
 
 import com.springBoot.Practice.Entity.TodoTasks;
-import com.springBoot.Practice.Entity.UserTasks;
 import com.springBoot.Practice.Service.TodoTasksService;
-import com.springBoot.Practice.Service.UserTasksService;
 import org.bson.types.ObjectId;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -17,11 +14,9 @@ import java.util.Optional;
 @RequestMapping("/todoTasks")
 public class TodoTasksController {
     private final TodoTasksService todoTasksService;
-    private final UserTasksService userTasksService;
 
-    public TodoTasksController(TodoTasksService todoTasksService, UserTasksService userTasksService) {
+    public TodoTasksController(TodoTasksService todoTasksService) {
         this.todoTasksService = todoTasksService;
-        this.userTasksService = userTasksService;
     }
 
 

@@ -18,8 +18,12 @@ import java.util.Optional;
 @RequestMapping("/journalV2")
 public class JournalEntryControllerV2 {
 
-    @Autowired
-    private JournalEntryServiceV2 journalEntryServiceV2;
+
+    private final JournalEntryServiceV2 journalEntryServiceV2;
+
+    public JournalEntryControllerV2(JournalEntryServiceV2 journalEntryControllerV2){
+        this.journalEntryServiceV2 = journalEntryControllerV2;
+    }
 
     private Map<String, JournalEntryV2> journalEntryHashMap = new HashMap<>();
     @GetMapping("/all")

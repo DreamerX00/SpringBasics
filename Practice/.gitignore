@@ -1,64 +1,121 @@
-# ========================================
-# General Build Artifacts
-# ========================================
+# Spring Boot / Java / Gradle .gitignore
+# Organized for Gradle-built Spring Boot projects (IntelliJ / Eclipse / VSCode)
+
+# ----------------------------------------
+# Build / output
+# ----------------------------------------
 .gradle/
 build/
+**/build/
+out/
+target/
+
+# Keep the Gradle wrapper jar in source control
 !gradle/wrapper/gradle-wrapper.jar
 
-# Ignore build outputs except inside source folders
-!**/src/main/**/build/
-!**/src/test/**/build/
+# ----------------------------------------
+# Gradle wrapper (auxiliary)
+# ----------------------------------------
+gradlew
+gradlew.bat
+.gradle/
 
-# ========================================
-# Application Configuration Files
-# ========================================
+# ----------------------------------------
+# IDEs
+# ----------------------------------------
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Eclipse / Spring Tool Suite
+.classpath
+.project
+.settings/
+.springBeans
+.apt_generated/
+
+# VS Code
+.vscode/
+
+# ----------------------------------------
+# OS files
+# ----------------------------------------
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# ----------------------------------------
+# Logs and runtime files
+# ----------------------------------------
+*.log
+logs/
+hs_err_pid*
+*.stacktrace
+
+# ----------------------------------------
+# Application configuration and secrets
+# ----------------------------------------
+# Many Spring Boot projects keep secrets or environment-specific config here; ignore by default.
 application.properties
 application.yml
 application-*.properties
 application-*.yml
+.env
+.env.*
+.local.env
+.local.properties
 
-# ========================================
-# Eclipse / Spring Tool Suite (STS)
-# ========================================
-.apt_generated/
-.classpath
-.factorypath
-.project
-.settings/
-.springBeans
-.sts4-cache/
-bin/
-!**/src/main/**/bin/
-!**/src/test/**/bin/
+# Keystores / certificates
+*.jks
+*.keystore
+*.p12
+*.pfx
 
-# ========================================
-# IntelliJ IDEA
-# ========================================
-.idea/
-*.iws
-*.iml
-*.ipr
-out/
-!**/src/main/**/out/
-!**/src/test/**/out/
+# ----------------------------------------
+# Test / reports / coverage
+# ----------------------------------------
+test-results/
+**/test-results/
+/reports/
+jacoco.exec
+coverage/
+coverage-reports/
 
-# ========================================
-# NetBeans
-# ========================================
-nbproject/private/
-nbbuild/
+# JUnit / Gradle test output
+**/build/test-results/
+**/build/reports/
+
+# ----------------------------------------
+# Generated / other
+# ----------------------------------------
+/generated/
+**/generated/
+**/generated-sources/
+**/generated-resources/
+*.class
+*.jar
+*.war
+*.ear
+
+# Node / frontend (if any frontend code exists)
+node_modules/
 dist/
-nbdist/
-.nb-gradle/
+build/static/
 
-# ========================================
-# Visual Studio Code
-# ========================================
-.vscode/
+# Dependency caches
+/.gradle/
+/.idea/libraries/
 
-# ========================================
-# OS & Miscellaneous
-# ========================================
+# Misc
+*.iml
 *.log
-.DS_Store
-Thumbs.db
+*.tmp
+*.swp
+
+# Don't accidentally commit secrets or local keys
+secrets.properties
+credentials.properties
+
+# End of file
