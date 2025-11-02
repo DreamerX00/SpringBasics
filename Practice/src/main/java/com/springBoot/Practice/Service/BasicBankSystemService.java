@@ -3,6 +3,7 @@ package com.springBoot.Practice.Service;
 import com.springBoot.Practice.Entity.BasicBankSystem;
 import com.springBoot.Practice.Enum.BasicBankAccountType;
 import com.springBoot.Practice.Repository.BasicBankSystemRepository;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
@@ -53,6 +54,7 @@ public class BasicBankSystemService {
             System.out.println("Account not found.");
         }
     }
+
 
     public List<BasicBankSystem> getAllAccounts() {
         return basicBankSystemRepository.findAll();

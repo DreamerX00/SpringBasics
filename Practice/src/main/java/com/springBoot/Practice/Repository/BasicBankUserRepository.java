@@ -14,4 +14,6 @@ public interface BasicBankUserRepository extends MongoRepository<BasicBankUsers,
     BasicBankUsers findBasicBankUsersByUserId(String userId);
 
     void deleteBasicBankUsersByUserId(String userId);
+
+    BasicBankUsers findByName(String name);
 }
